@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:realestate/module/widgets/home_details_item.dart';
 
 import '../module/widgets/category_iteam.dart';
 import '../module/widgets/input_text.dart';
@@ -10,6 +11,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: SvgPicture.asset("assets/svg/listbar.svg"),
         appBar: AppBar(
           elevation: 0,
           backgroundColor: const Color(0xFFFFFFFF),
@@ -80,7 +82,19 @@ class Home extends StatelessWidget {
                         const Spacer(),
                         SvgPicture.asset("assets/svg/right.svg")
                       ],
-                    ))
+                    )),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30, top: 30),
+                  child: SizedBox(
+                      width: double.infinity,
+                      height: 340,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 3,
+                          itemBuilder: (context, index) {
+                            return const InformationHomeDetailsIteam();
+                          })),
+                ),
               ],
             ),
           ),

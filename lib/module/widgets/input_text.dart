@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MInputText extends StatelessWidget {
   const MInputText({Key? key}) : super(key: key);
@@ -8,8 +9,8 @@ class MInputText extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(vertical: 20),
-        prefixIcon:
-            const Icon(Icons.search, color: Color(0xFFB8B8B8), size: 24),
+        prefixIcon: SvgPicture.asset('assets/svg/search.svg',
+            fit: BoxFit.scaleDown, width: 26, color: const Color(0xFFB8B8B8)),
         hintText: "Search...",
         hintStyle: const TextStyle(color: Color(0xFFB8B8B8), fontSize: 14),
         enabledBorder: OutlineInputBorder(
