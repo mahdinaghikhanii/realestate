@@ -8,17 +8,17 @@
         "Rental_time": "years",
         "category": "Home",
         "image": "ssss",
-        "rate": 3.9
+        "rate": 5.0
     },
     {
         "id": 2,
         "title": "Plaza Avenue Building",
-        "price": 3100,
+        "price": 3270,
         "country": "iran",
         "city": "Balikpapan",
         "Rental_time": "years",
-        "category": "Home",
+        "category": "Apartment",
         "image": "ssss",
-        "rate": 3.9
+        "rate": 4.9
     }
 ]
