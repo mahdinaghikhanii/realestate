@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title": "Plaza Avenue Building",
+        "price": 3100,
+        "country": "iran",
+        "city": "Balikpapan",
+        "Rental_time": "years",
+        "category": "Home",
+        "image": "ssss",
+        "rate": 3.9
+    },
+    {
+        "id": 2,
+        "title": "Plaza Avenue Building",
+        "price": 3100,
+        "country": "iran",
+        "city": "Balikpapan",
+        "Rental_time": "years",
+        "category": "Home",
+        "image": "ssss",
+        "rate": 3.9
+    }
+]
