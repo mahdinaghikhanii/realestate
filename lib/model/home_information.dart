@@ -1,4 +1,4 @@
-class HomeInformation {
+class HomeInformationModel {
   int? id;
   String? title;
   int? price;
@@ -9,7 +9,7 @@ class HomeInformation {
   String? image;
   double? rate;
 
-  HomeInformation(
+  HomeInformationModel(
       {this.id,
       this.title,
       this.price,
@@ -20,7 +20,7 @@ class HomeInformation {
       this.image,
       this.rate});
 
-  HomeInformation.fromJson(Map<String, dynamic> json) {
+  HomeInformationModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     title = json['title'];
     price = json['price'];
@@ -33,16 +33,16 @@ class HomeInformation {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['price'] = this.price;
-    data['country'] = this.country;
-    data['city'] = this.city;
-    data['Rental_time'] = this.rentalTime;
-    data['category'] = this.category;
-    data['image'] = this.image;
-    data['rate'] = this.rate;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['price'] = price;
+    data['country'] = country;
+    data['city'] = city;
+    data['Rental_time'] = rentalTime;
+    data['category'] = category;
+    data['image'] = image;
+    data['rate'] = rate;
     return data;
   }
 }
