@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import '../module/widgets/category_iteam.dart';
+import '../module/widgets/input_text.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,9 +17,9 @@ class Home extends StatelessWidget {
           centerTitle: false,
           titleSpacing: 0,
           title: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              "find your best\nproperty",
+              "Find your best\nproperty",
               style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
@@ -24,11 +28,12 @@ class Home extends StatelessWidget {
           ),
           actions: const [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.symmetric(horizontal: 30),
               child: SizedBox(
                 width: 48,
                 height: 48,
                 child: CircleAvatar(
+                  backgroundColor: Colors.transparent,
                   backgroundImage: AssetImage(
                     'assets/img/profile.jpg',
                   ),
@@ -43,7 +48,40 @@ class Home extends StatelessWidget {
             height: double.infinity,
             color: const Color(0xFFFFFFFF),
             child: Column(
-              children: [Container()],
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 30),
+                const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    child: MInputText()),
+                const SizedBox(height: 26),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30),
+                  child: SizedBox(
+                      width: double.infinity,
+                      height: 50,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 3,
+                          itemBuilder: (context, index) {
+                            return const CateGoryIteam();
+                          })),
+                ),
+                const SizedBox(height: 30),
+                Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    child: Row(
+                      children: [
+                        const Text('Popular',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20)),
+                        const Spacer(),
+                        SvgPicture.asset("assets/svg/right.svg")
+                      ],
+                    ))
+              ],
             ),
           ),
         ));
