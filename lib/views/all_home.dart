@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:realestate/module/extention/extention.dart';
+import 'package:realestate/module/widgets/input_text.dart';
 
 class AllHome extends StatelessWidget {
   const AllHome({Key? key}) : super(key: key);
@@ -48,14 +49,20 @@ class AllHome extends StatelessWidget {
             ),
           )
         ],
-        title: const Text(
-          "Discover",
-          style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
-        ),
+        title: Text("Discover", style: context.textTheme.subtitle1),
       ),
-      body: Column(
-        children: [],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 15),
+            const MInputText(),
+            const SizedBox(height: 20),
+            Text("50 results", style: context.textTheme.subtitle1),
+            const SizedBox(height: 30),
+          ],
+        ),
       ),
     );
   }
