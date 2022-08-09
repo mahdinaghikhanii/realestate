@@ -109,7 +109,7 @@ class Home extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 30, top: 30),
                       child: SizedBox(
                           width: double.infinity,
-                          height: 340,
+                          height: 345,
                           child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               itemCount: 3,

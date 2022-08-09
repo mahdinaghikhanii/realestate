@@ -19,7 +19,20 @@ class InformationHomeDetailsIteam extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(model.image),
+                Container(
+                  clipBehavior: Clip.hardEdge,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  )),
+                  child: Image.asset(
+                    model.image,
+                    width: 240,
+                    height: 200,
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 const SizedBox(height: 15),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
@@ -28,13 +41,13 @@ class InformationHomeDetailsIteam extends StatelessWidget {
                       SvgPicture.asset("assets/svg/star.svg",
                           color: const Color(0xFFF2C94C)),
                       const SizedBox(width: 5),
-                      const Text(
-                        '5.0',
-                        style: TextStyle(color: Color(0xFFF2C94C)),
+                      Text(
+                        model.rate.toString(),
+                        style: const TextStyle(color: Color(0xFFF2C94C)),
                       ),
                       const SizedBox(width: 10),
-                      const Text(' Home',
-                          style: TextStyle(
+                      Text(model.category,
+                          style: const TextStyle(
                             color: Color(0xFF00CC96),
                             fontSize: 14,
                           ))
@@ -49,6 +62,7 @@ class InformationHomeDetailsIteam extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 16,
                           color: Colors.black,
+                          fontFamily: "Poppins",
                           fontWeight: FontWeight.bold),
                     )),
                 const SizedBox(height: 10),
@@ -62,7 +76,10 @@ class InformationHomeDetailsIteam extends StatelessWidget {
                     const SizedBox(width: 5),
                     const Text(
                       'Balikpapan, Indonesia',
-                      style: TextStyle(color: Color(0xFFB8B8B8), fontSize: 11),
+                      style: TextStyle(
+                          color: Color(0xFFB8B8B8),
+                          fontSize: 11,
+                          fontFamily: "Poppins"),
                     )
                   ]),
                 ),
