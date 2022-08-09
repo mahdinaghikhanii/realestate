@@ -1,24 +1,26 @@
 class HomeInformationModel {
-  int? id;
-  String? title;
+  late int id;
+  late String title;
   int? price;
   String? country;
   String? city;
   String? rentalTime;
-  String? category;
-  String? image;
+  late String category;
+  late String image;
   double? rate;
+  late String iconCategory;
 
   HomeInformationModel(
-      {this.id,
-      this.title,
+      {required this.id,
+      required this.title,
       this.price,
       this.country,
       this.city,
       this.rentalTime,
-      this.category,
-      this.image,
-      this.rate});
+      required this.category,
+      required this.image,
+      this.rate,
+      required this.iconCategory});
 
   HomeInformationModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -30,6 +32,7 @@ class HomeInformationModel {
     category = json['category'];
     image = json['image'];
     rate = json['rate'];
+    iconCategory = json['icon_category'];
   }
 
   Map<String, dynamic> toJson() {
@@ -42,7 +45,8 @@ class HomeInformationModel {
     data['Rental_time'] = rentalTime;
     data['category'] = category;
     data['image'] = image;
-    data['rate'] = rate;
+    data['rate'] = rate as double;
+    data['icon_category'] = iconCategory;
     return data;
   }
 }

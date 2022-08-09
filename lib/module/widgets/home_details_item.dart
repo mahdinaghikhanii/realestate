@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:realestate/model/home_information.dart';
 
 class InformationHomeDetailsIteam extends StatelessWidget {
-  const InformationHomeDetailsIteam({Key? key}) : super(key: key);
+  final HomeInformationModel model;
+  const InformationHomeDetailsIteam({Key? key, required this.model})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class InformationHomeDetailsIteam extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset('assets/img/home1.png'),
+                Image.asset(model.image),
                 const SizedBox(height: 15),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),

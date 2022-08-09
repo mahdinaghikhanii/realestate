@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:realestate/model/home_information.dart';
 
 class CateGoryIteam extends StatelessWidget {
-  const CateGoryIteam({Key? key}) : super(key: key);
+  final HomeInformationModel model;
+  const CateGoryIteam({Key? key, required this.model}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 16),
       child: Container(
-          height: 28,
-          width: 120,
+          height: 26,
+          width: model.category.length < 6 ? 115 : 140,
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: BoxDecoration(
               border: Border.all(width: 2, color: const Color(0xFFF4F4F4)),
@@ -20,15 +22,18 @@ class CateGoryIteam extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                width: 25,
-                height: 25,
-                child: SvgPicture.asset('assets/svg/Subtract.svg',
-                    width: 30, height: 30, color: const Color(0xFF00CC96)),
+                width: 28,
+                height: 28,
+                child: SvgPicture.asset(model.iconCategory.toString(),
+                    fit: BoxFit.scaleDown,
+                    width: 20,
+                    height: 30,
+                    color: const Color(0xFF00CC96)),
               ),
-              const SizedBox(width: 8),
-              const Text("Home",
+              const SizedBox(width: 6),
+              Text(model.category,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Color(0xFF00CC96),
                       fontSize: 14,
                       fontWeight: FontWeight.w500)),

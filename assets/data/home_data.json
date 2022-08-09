@@ -3,22 +3,36 @@
         "id": 1,
         "title": "Plaza Avenue Building",
         "price": 3100,
-        "country": "iran",
+        "country": "Indonesia",
         "city": "Balikpapan",
         "Rental_time": "years",
         "category": "Home",
-        "image": "ssss",
-        "rate": 5.0
+        "image": "assets/img/home1.png",
+        "rate" : 5.0,
+        "icon_category" : "assets/svg/home.svg"
     },
     {
         "id": 2,
-        "title": "Plaza Avenue Building",
+        "title": " Avenue home",
         "price": 3270,
-        "country": "iran",
+        "country": "Indonesia",
+        "city": "Balikpapan",
+        "Rental_time": "years",
+        "category": "Villa",
+        "image": "assets/img/home2.png",
+        "rate": 4.9,
+        "icon_category" : "assets/svg/vila.svg"
+    },
+    {
+        "id": 3,
+        "title": "Plaza vila ",
+        "price": 2880,
+        "country": "Indonesia",
         "city": "Balikpapan",
         "Rental_time": "years",
         "category": "Apartment",
-        "image": "ssss",
-        "rate": 4.9
+        "image": "assets/img/home3.png",
+        "rate": 4.5,
+        "icon_category" : "assets/svg/aparteman.svg"
     }
 ]
