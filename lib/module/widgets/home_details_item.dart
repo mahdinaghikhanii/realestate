@@ -14,7 +14,7 @@ class InformationHomeDetailsIteam extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: const Color(0xFFF4F4F4), width: 2)),
+              border: Border.all(color: const Color(0xFFF4F4F4), width: 1)),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,

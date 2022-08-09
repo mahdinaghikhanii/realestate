@@ -28,39 +28,8 @@ class Home extends StatelessWidget {
         if (featchedata.connectionState == ConnectionState.none) {}
 
         return Scaffold(
+            backgroundColor: const Color(0xFFFFFFFF),
             bottomNavigationBar: SvgPicture.asset("assets/svg/listbar.svg"),
-            appBar: AppBar(
-              elevation: 0,
-              backgroundColor: const Color(0xFFFFFFFF),
-              automaticallyImplyLeading: false,
-              centerTitle: false,
-              titleSpacing: 0,
-              title: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: Text(
-                  "Find your best\nproperty",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
-                ),
-              ),
-              actions: const [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30),
-                  child: SizedBox(
-                    width: 48,
-                    height: 48,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.transparent,
-                      backgroundImage: AssetImage(
-                        'assets/img/profile.jpg',
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
             body: SafeArea(
               child: Container(
                 width: double.infinity,
@@ -69,6 +38,35 @@ class Home extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 30),
+                          child: Text(
+                            "Find your best\nproperty",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ),
+                        Spacer(),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 30),
+                          child: SizedBox(
+                            width: 48,
+                            height: 48,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.transparent,
+                              backgroundImage: AssetImage(
+                                'assets/img/profile.jpg',
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                     const SizedBox(height: 30),
                     const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 30),
@@ -106,7 +104,7 @@ class Home extends StatelessWidget {
                           ],
                         )),
                     Padding(
-                      padding: const EdgeInsets.only(left: 30, top: 30),
+                      padding: const EdgeInsets.only(left: 30, top: 20),
                       child: SizedBox(
                           width: double.infinity,
                           height: 345,

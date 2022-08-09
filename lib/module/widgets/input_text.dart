@@ -14,11 +14,11 @@ class MInputText extends StatelessWidget {
         hintText: "Search...",
         hintStyle: const TextStyle(color: Color(0xFFB8B8B8), fontSize: 14),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(width: 2, color: Color(0xFFF4F4F4)),
+          borderSide: const BorderSide(width: 1, color: Color(0xFFF4F4F4)),
           borderRadius: BorderRadius.circular(32),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(width: 2, color: Color(0xFFF4F4F4)),
+          borderSide: const BorderSide(width: 1, color: Color(0xFFF4F4F4)),
           borderRadius: BorderRadius.circular(15),
         ),
       ),

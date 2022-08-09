@@ -15,7 +15,7 @@ class CateGoryIteam extends StatelessWidget {
           width: model.category.length < 6 ? 115 : 140,
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: BoxDecoration(
-              border: Border.all(width: 2, color: const Color(0xFFF4F4F4)),
+              border: Border.all(width: 1, color: const Color(0xFFF4F4F4)),
               borderRadius: BorderRadius.circular(32)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
