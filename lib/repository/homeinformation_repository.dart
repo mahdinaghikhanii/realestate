@@ -9,7 +9,7 @@ class HomeInformationModelRepository extends ChangeNotifier {
   List get items => _listIteams;
 
   Future featchData() async {
-    return await Future.delayed(const Duration(seconds: 0)).then((value) async {
+    return await Future.delayed(const Duration(seconds: 2)).then((value) async {
       var respone = await rootBundle.loadString('assets/data/home_data.json');
       List data = jsonDecode(respone);
       List<HomeInformationModel> loadedInformationHome = [];

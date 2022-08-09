@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 import 'package:realestate/module/extention/extention.dart';
+import 'package:realestate/module/widgets/detail_information_home.dart';
 import 'package:realestate/module/widgets/input_text.dart';
+import 'package:realestate/module/widgets/loading.dart';
+import 'package:realestate/module/widgets/notfound.dart';
+import 'package:realestate/repository/homeinformation_repository.dart';
 
 class AllHome extends StatelessWidget {
   const AllHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final data =
+        Provider.of<HomeInformationModelRepository>(context, listen: false);
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
@@ -51,18 +58,39 @@ class AllHome extends StatelessWidget {
         ],
         title: Text("Discover", style: context.textTheme.subtitle1),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 15),
-            const MInputText(),
-            const SizedBox(height: 20),
-            Text("50 results", style: context.textTheme.subtitle1),
-            const SizedBox(height: 30),
-          ],
-        ),
+      body: FutureBuilder(
+        future:
+            Provider.of<HomeInformationModelRepository>(context, listen: false)
+                .featchData(),
+        builder: (BuildContext context, AsyncSnapshot<dynamic> featchedata) {
+          if (featchedata.connectionState == ConnectionState.waiting) {
+            return const Loading();
+          }
+          if (featchedata.connectionState == ConnectionState.none) {
+            return const NotFound();
+          }
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 22),
+                const MInputText(),
+                const SizedBox(height: 24),
+                Text("50 results", style: context.textTheme.subtitle1),
+                const SizedBox(height: 24),
+                Expanded(
+                    child: ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        itemCount: data.items.length,
+                        itemBuilder: (context, index) {
+                          return DetailInformationHome(
+                              model: data.items[index]);
+                        })),
+              ],
+            ),
+          );
+        },
       ),
     );
   }

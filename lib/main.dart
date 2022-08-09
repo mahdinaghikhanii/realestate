@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:realestate/config/theme.dart';
 import 'package:realestate/repository/homeinformation_repository.dart';
 
 import 'views/home.dart';
@@ -21,9 +22,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Realstat e',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        theme: ThemeConfig.themeData(true, context),
         home: const Home(),
       ),
     );

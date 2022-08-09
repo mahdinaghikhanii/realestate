@@ -87,17 +87,18 @@ class InformationHomeDetailsIteam extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 10),
                   child: Row(
-                    children: const [
-                      Text("\$3100",
-                          style: TextStyle(
+                    children: [
+                      Text(model.price.toString(),
+                          style: const TextStyle(
                               fontSize: 16,
                               color: Color(
                                 0xFF00CC96,
                               ),
                               fontWeight: FontWeight.bold)),
-                      Text("/years",
+                      const Text("/years",
                           style: TextStyle(
                               fontSize: 14,
+                              overflow: TextOverflow.clip,
                               color: Color(0xFFB8B8B8),
                               fontWeight: FontWeight.bold)),
                     ],
