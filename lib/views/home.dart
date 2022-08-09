@@ -3,6 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:realestate/module/extention/extention.dart';
+import 'package:realestate/views/all_home.dart';
 
 import '../module/widgets/category_iteam.dart';
 import '../module/widgets/home_details_item.dart';
@@ -87,7 +89,7 @@ class Home extends StatelessWidget {
                     ),
                     const SizedBox(height: 30),
                     Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        padding: const EdgeInsets.only(left: 30, right: 26),
                         child: Row(
                           children: [
                             const Text('Popular',
@@ -96,11 +98,22 @@ class Home extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20)),
                             const Spacer(),
-                            InkWell(
-                                onTap: () {
-                                  log(homeData.items.length.toString());
-                                },
-                                child: SvgPicture.asset("assets/svg/right.svg"))
+                            Material(
+                              child: InkWell(
+                                  customBorder: Border.all(
+                                      color: const Color(0xFF00CC96), width: 1),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(16)),
+                                  splashColor: const Color(0xFF00CC96),
+                                  onTap: () =>
+                                      context.nextScreans(const AllHome()),
+                                  child: SizedBox(
+                                      width: 30,
+                                      height: 26,
+                                      child: Center(
+                                          child: SvgPicture.asset(
+                                              "assets/svg/right.svg")))),
+                            )
                           ],
                         )),
                     Padding(
