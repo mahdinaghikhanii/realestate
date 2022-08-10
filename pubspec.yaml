@@ -66,6 +66,7 @@ flutter:
      - assets/img/
      - assets/svg/
      - assets/data/home_data.json
+     - assets/svg/bottom_navigation_icon/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

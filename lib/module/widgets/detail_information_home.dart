@@ -67,7 +67,7 @@ class DetailInformationHome extends StatelessWidget {
                     children: [
                       Text('\$${model.price}',
                           style: const TextStyle(
-                              fontSize: 14,
+                              fontSize: 16,
                               color: Color(
                                 0xFF00CC96,
                               ),
@@ -86,11 +86,13 @@ class DetailInformationHome extends StatelessWidget {
                           const SizedBox(width: 5),
                           Text(
                             model.rate.toString(),
+                            textAlign: TextAlign.center,
                             style: const TextStyle(
                                 color: Color(0xFFF2C94C), fontSize: 10),
                           ),
                           const SizedBox(width: 10),
                           Text(model.category,
+                              textAlign: TextAlign.center,
                               style: const TextStyle(
                                 overflow: TextOverflow.clip,
                                 color: Color(0xFF00CC96),

@@ -3,11 +3,16 @@ import 'package:flutter/material.dart';
 class ThemeConfig {
   static ThemeData themeData(bool isDarkTheme, context) {
     return ThemeData(
+        splashColor: Colors.grey,
         textTheme: TextTheme(
-      subtitle1: TextStyle(
-          color: isDarkTheme ? Colors.black : Colors.white,
-          fontWeight: FontWeight.w700,
-          fontSize: 16),
-    ));
+          subtitle2: TextStyle(
+              color: isDarkTheme ? Colors.black : Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 20),
+          subtitle1: TextStyle(
+              color: isDarkTheme ? Colors.black : Colors.white,
+              fontWeight: FontWeight.w700,
+              fontSize: 16),
+        ));
   }
 }

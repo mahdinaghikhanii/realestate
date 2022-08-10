@@ -18,28 +18,26 @@ class AllHome extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
+        centerTitle: true,
         elevation: 0,
         backgroundColor: const Color(0xFFFFFFFF),
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: () => context.back(),
-              child: Container(
-                width: 36,
-                height: 36,
-                decoration: BoxDecoration(
-                    color: Colors.grey.shade100, shape: BoxShape.circle),
-                child: Center(
-                  child: SvgPicture.asset(
-                    'assets/svg/back.svg',
-                    fit: BoxFit.contain,
-                    width: 8,
-                    height: 14,
-                  ),
+          padding: const EdgeInsets.symmetric(horizontal: 26),
+          child: InkWell(
+            onTap: () => context.back(),
+            child: Container(
+              width: 18,
+              height: 18,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade100, shape: BoxShape.circle),
+              child: Center(
+                child: SvgPicture.asset(
+                  'assets/svg/back.svg',
+                  fit: BoxFit.contain,
+                  width: 8,
+                  height: 14,
                 ),
               ),
             ),
@@ -47,7 +45,7 @@ class AllHome extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: SvgPicture.asset(
               'assets/svg/settings.svg',
               fit: BoxFit.contain,
@@ -70,7 +68,7 @@ class AllHome extends StatelessWidget {
             return const NotFound();
           }
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
