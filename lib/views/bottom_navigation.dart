@@ -25,7 +25,7 @@ class _CustomBottmNavigationBarState extends State<CustomBottmNavigationBar> {
     return Scaffold(
         bottomNavigationBar: Container(
             decoration:
-                BoxDecoration(color: Color(0xFFFCFCFD).withOpacity(0.1)),
+                BoxDecoration(color: const Color(0xFFFCFCFD).withOpacity(0.1)),
             child: ClipRRect(
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 25, sigmaY: 25),
