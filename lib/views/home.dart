@@ -30,7 +30,7 @@ class Home extends StatelessWidget {
 
         return Scaffold(
             backgroundColor: const Color(0xFFFFFFFF),
-            bottomNavigationBar: SafeArea(child: CustomBottmNavigationBar()),
+            bottomNavigationBar: const CustomBottmNavigationBar(),
             body: SafeArea(
               child: Container(
                 width: double.infinity,

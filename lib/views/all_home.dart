@@ -24,12 +24,12 @@ class AllHome extends StatelessWidget {
         automaticallyImplyLeading: false,
         leadingWidth: 100,
         leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 26),
+          padding: const EdgeInsets.symmetric(horizontal: 28),
           child: InkWell(
             onTap: () => context.back(),
             child: Container(
-              width: 18,
-              height: 18,
+              width: 16,
+              height: 16,
               decoration: BoxDecoration(
                   color: Colors.grey.shade100, shape: BoxShape.circle),
               child: Center(
