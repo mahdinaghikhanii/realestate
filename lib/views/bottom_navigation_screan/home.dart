@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
-import '../module/extention/extention.dart';
-import '../module/widgets/bottomnavigationbar.dart';
-import '../module/widgets/category_iteam.dart';
-import '../module/widgets/home_details_item.dart';
-import '../module/widgets/input_text.dart';
-import '../module/widgets/loading.dart';
-import '../repository/homeinformation_repository.dart';
-import 'all_home.dart';
+import '../../module/extention/extention.dart';
+
+import '../../module/widgets/category_iteam.dart';
+import '../../module/widgets/home_details_item.dart';
+import '../../module/widgets/input_text.dart';
+import '../../module/widgets/loading.dart';
+import '../../repository/homeinformation_repository.dart';
+import '../all_home.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -30,7 +30,6 @@ class Home extends StatelessWidget {
 
         return Scaffold(
             backgroundColor: const Color(0xFFFFFFFF),
-            bottomNavigationBar: const CustomBottmNavigationBar(),
             body: SafeArea(
               child: Container(
                 width: double.infinity,

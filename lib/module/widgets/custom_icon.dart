@@ -4,11 +4,13 @@ import 'package:flutter_svg/svg.dart';
 class CustomIcon extends StatelessWidget {
   final Function() ontap;
   final String imgAddres;
+  final String imgSelected;
   final bool isSelected;
   const CustomIcon(
       {Key? key,
       required this.ontap,
       required this.imgAddres,
+      required this.imgSelected,
       required this.isSelected})
       : super(key: key);
 
@@ -17,11 +19,11 @@ class CustomIcon extends StatelessWidget {
     return InkWell(
       onTap: ontap,
       child: SizedBox(
-        width: 24,
-        height: 24,
+        width: isSelected ? 32 : 24,
+        height: isSelected ? 32 : 24,
         child: SvgPicture.asset(
-          imgAddres,
-          color: isSelected ? Colors.black : Colors.red,
+          isSelected ? imgSelected : imgAddres,
+          color: isSelected ? const Color(0xFF00CC96) : const Color(0xFFB8B8B8),
         ),
       ),
     );
