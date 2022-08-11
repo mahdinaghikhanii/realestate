@@ -62,7 +62,8 @@ class _CustomBottmNavigationBarState extends State<CustomBottmNavigationBar> {
                     },
                     imgAddres: 'assets/svg/bottom_navigation_icon/chat.svg',
                     isSelected: _selectedIndex == 2,
-                    imgSelected: 'assets/svg/bottom_navigation_icon/chat.svg',
+                    imgSelected:
+                        'assets/svg/bottom_navigation_icon/chat_selected.svg',
                   ),
                   CustomIcon(
                     ontap: () {
