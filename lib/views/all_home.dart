@@ -83,7 +83,9 @@ class AllHome extends StatelessWidget {
                         itemCount: data.items.length,
                         itemBuilder: (context, index) {
                           return DetailInformationHome(
-                              model: data.items[index]);
+                            model: data.items[index],
+                            showFavoriteIcon: false,
+                          );
                         })),
               ],
             ),
