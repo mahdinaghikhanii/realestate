@@ -4,9 +4,14 @@ class ThemeConfig {
   static ThemeData themeData(bool isDarkTheme, context) {
     return ThemeData(
         splashColor: Colors.transparent,
+        iconTheme: const IconThemeData(color: Color(0xFF00CC96)),
         highlightColor: Colors.transparent,
         hoverColor: Colors.transparent,
         textTheme: TextTheme(
+          bodyText2: const TextStyle(
+              color: Color(0xFF271B27),
+              fontWeight: FontWeight.w500,
+              fontFamily: "Poppins"),
           subtitle2: TextStyle(
               color: isDarkTheme ? Colors.black : Colors.white,
               fontWeight: FontWeight.bold,
