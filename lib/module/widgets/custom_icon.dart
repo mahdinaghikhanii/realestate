@@ -17,13 +17,19 @@ class CustomIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      splashColor: Colors.grey,
+      borderRadius: BorderRadius.circular(20),
       onTap: ontap,
-      child: SizedBox(
-        width: isSelected ? 32 : 24,
-        height: isSelected ? 32 : 24,
-        child: SvgPicture.asset(
-          isSelected ? imgSelected : imgAddres,
-          color: isSelected ? const Color(0xFF00CC96) : const Color(0xFFB8B8B8),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: SizedBox(
+          width: isSelected ? 32 : 24,
+          height: isSelected ? 32 : 24,
+          child: SvgPicture.asset(
+            isSelected ? imgSelected : imgAddres,
+            color:
+                isSelected ? const Color(0xFF00CC96) : const Color(0xFFB8B8B8),
+          ),
         ),
       ),
     );
