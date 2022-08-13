@@ -22,23 +22,16 @@ class AllHome extends StatelessWidget {
         elevation: 0,
         backgroundColor: const Color(0xFFFFFFFF),
         automaticallyImplyLeading: false,
-        leadingWidth: 100,
         leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 28),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: InkWell(
             onTap: () => context.back(),
-            child: Container(
-              width: 16,
-              height: 16,
-              decoration: BoxDecoration(
-                  color: Colors.grey.shade100, shape: BoxShape.circle),
-              child: Center(
-                child: SvgPicture.asset(
-                  'assets/svg/back.svg',
-                  fit: BoxFit.contain,
-                  width: 8,
-                  height: 14,
-                ),
+            child: Center(
+              child: SvgPicture.asset(
+                'assets/svg/back.svg',
+                fit: BoxFit.contain,
+                width: 18,
+                height: 18,
               ),
             ),
           ),

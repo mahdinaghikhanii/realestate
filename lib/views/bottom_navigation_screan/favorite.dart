@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
-import 'package:realestate/module/extention/extention.dart';
-import 'package:realestate/module/widgets/loading.dart';
-import 'package:realestate/module/widgets/notfound.dart';
-import 'package:realestate/repository/homeinformation_repository.dart';
 
+import '../../module/extention/extention.dart';
 import '../../module/widgets/detail_information_home.dart';
-import '../../module/widgets/input_text.dart';
+import '../../module/widgets/loading.dart';
+import '../../module/widgets/notfound.dart';
+import '../../repository/homeinformation_repository.dart';
 
 class Favorite extends StatelessWidget {
   const Favorite({Key? key}) : super(key: key);
