@@ -65,6 +65,7 @@ flutter:
   assets:
      - assets/img/
      - assets/svg/
+     - assets/svg/svg_button/
      - assets/data/home_data.json
      - assets/svg/bottom_navigation_icon/
 

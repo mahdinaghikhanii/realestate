@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:realestate/views/details.dart';
 
 import '../../module/extention/extention.dart';
 
@@ -122,7 +123,13 @@ class Home extends StatelessWidget {
                                 itemCount: 3,
                                 itemBuilder: (context, index) {
                                   return InformationHomeDetailsIteam(
-                                      model: homeData.items[index]);
+                                    model: homeData.items[index],
+                                    ontap: () {
+                                      context.nextScreans(Details(
+                                          homeInformationModel:
+                                              homeData.items[index]));
+                                    },
+                                  );
                                 })),
                       ),
                       const SizedBox(height: 30),
@@ -158,7 +165,13 @@ class Home extends StatelessWidget {
                                 itemCount: 3,
                                 itemBuilder: (context, index) {
                                   return InformationHomeDetailsIteam(
-                                      model: homeData.items[index]);
+                                    model: homeData.items[index],
+                                    ontap: () {
+                                      context.nextScreans(Details(
+                                          homeInformationModel:
+                                              homeData.items[index]));
+                                    },
+                                  );
                                 })),
                       ),
                     ],

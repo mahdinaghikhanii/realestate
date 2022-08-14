@@ -7,6 +7,10 @@ class ThemeConfig {
         iconTheme: const IconThemeData(color: Color(0xFF00CC96)),
         highlightColor: Colors.transparent,
         hoverColor: Colors.transparent,
+        scaffoldBackgroundColor: const Color(0xFFFFFFFF),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFFFFFFFF),
+        ),
         textTheme: TextTheme(
           bodyText2: const TextStyle(
               color: Color(0xFF271B27),
