@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:realestate/views/details.dart';
 
 import '../../module/extention/extention.dart';
 import '../../module/widgets/detail_information_home.dart';
@@ -63,9 +64,11 @@ class Favorite extends StatelessWidget {
                           itemCount: homeData.items.length,
                           itemBuilder: (context, index) {
                             return DetailInformationHome(
-                              model: homeData.items[index],
-                              showFavoriteIcon: true,
-                            );
+                                model: homeData.items[index],
+                                showFavoriteIcon: true,
+                                ontap: () => context.nextScreans(Details(
+                                    homeInformationModel:
+                                        homeData.items[index])));
                           })),
                 ],
               ),

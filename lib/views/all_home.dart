@@ -7,6 +7,7 @@ import 'package:realestate/module/widgets/input_text.dart';
 import 'package:realestate/module/widgets/loading.dart';
 import 'package:realestate/module/widgets/notfound.dart';
 import 'package:realestate/repository/homeinformation_repository.dart';
+import 'package:realestate/views/details.dart';
 
 class AllHome extends StatelessWidget {
   const AllHome({Key? key}) : super(key: key);
@@ -77,9 +78,10 @@ class AllHome extends StatelessWidget {
                         itemCount: data.items.length,
                         itemBuilder: (context, index) {
                           return DetailInformationHome(
-                            model: data.items[index],
-                            showFavoriteIcon: false,
-                          );
+                              model: data.items[index],
+                              showFavoriteIcon: false,
+                              ontap: () => context.nextScreans(Details(
+                                  homeInformationModel: data.items[index])));
                         })),
               ],
             ),

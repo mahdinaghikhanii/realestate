@@ -2,9 +2,9 @@ class HomeInformationModel {
   late int id;
   late String title;
   int? price;
-  String? country;
-  String? city;
-  String? rentalTime;
+  late String country;
+  late String city;
+  late String rentalTime;
   late String category;
   late String image;
   double? rate;
@@ -14,9 +14,9 @@ class HomeInformationModel {
       {required this.id,
       required this.title,
       this.price,
-      this.country,
-      this.city,
-      this.rentalTime,
+      required this.country,
+      required this.city,
+      required this.rentalTime,
       required this.category,
       required this.image,
       this.rate,

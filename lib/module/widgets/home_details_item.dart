@@ -59,11 +59,11 @@ class InformationHomeDetailsIteam extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  const Padding(
-                      padding: EdgeInsets.only(left: 10),
+                  Padding(
+                      padding: const EdgeInsets.only(left: 10),
                       child: Text(
-                        "Plaza Avenue Building",
-                        style: TextStyle(
+                        model.title,
+                        style: const TextStyle(
                             fontSize: 16,
                             color: Colors.black,
                             fontFamily: "Poppins",
