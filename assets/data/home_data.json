@@ -9,7 +9,11 @@
         "category": "Home",
         "image": "assets/img/home1.png",
         "rate" : 5.0,
-        "icon_category" : "assets/svg/home.svg"
+        "icon_category" : "assets/svg/home.svg",
+        "size_home" : "40 * 80 m",
+        "parking" : "Parking",
+        "bedroom" : "4",
+        "Bathroom" : "3"
     },
     {
         "id": 2,
@@ -21,7 +25,11 @@
         "category": "Villa",
         "image": "assets/img/home2.png",
         "rate": 4.9,
-        "icon_category" : "assets/svg/vila.svg"
+        "icon_category" : "assets/svg/vila.svg",
+        "size_home" : "60 * 80 m",
+        "parking" : "Parking",
+        "bedroom" : "5",
+        "Bathroom" : "2"
     },
     {
         "id": 3,
@@ -33,6 +41,10 @@
         "category": "Apartment",
         "image": "assets/img/home3.png",
         "rate": 4.5,
-        "icon_category" : "assets/svg/aparteman.svg"
+        "icon_category" : "assets/svg/aparteman.svg",
+        "size_home" : "45 * 70 m",
+        "parking" : "Parking",
+        "bedroom" : "4",
+        "Bathroom" : "4"
     }
 ]

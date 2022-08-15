@@ -125,7 +125,16 @@ class Details extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 29),
-              const Divider(color: Color(0xFFF4F4F4))
+              const Divider(color: Color(0xFFF4F4F4)),
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      SvgPicture.asset('assets/svg/size.svg'),
+                    ],
+                  )
+                ],
+              )
             ],
           ),
         ));
