@@ -5,21 +5,22 @@ import 'package:flutter_svg/svg.dart';
 import '../extention/extention.dart';
 
 class AppbarDetail extends StatelessWidget {
-  final AnimationController animationController;
-  final Animation animation;
-
   const AppbarDetail(
       {Key? key, required this.animation, required this.animationController})
       : super(key: key);
 
+  final AnimationController animationController;
+  final Animation animation;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: 100,
+    return SizedBox(
+        height: 80,
         child: AnimatedBuilder(
             animation: animationController,
             builder: (BuildContext context, Widget? child) {
               return AppBar(
+                  backgroundColor: animation.value,
                   leadingWidth: 80,
                   elevation: 0,
                   leading: Padding(
