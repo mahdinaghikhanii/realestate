@@ -9,6 +9,11 @@ class HomeInformationModel {
   late String image;
   double? rate;
   late String iconCategory;
+  late String sizeHome;
+  late int bedRoom;
+  late int bathRoom;
+  late bool parking;
+  late String description;
 
   HomeInformationModel(
       {required this.id,
@@ -18,9 +23,14 @@ class HomeInformationModel {
       required this.city,
       required this.rentalTime,
       required this.category,
+      required this.description,
       required this.image,
+      required this.sizeHome,
       this.rate,
-      required this.iconCategory});
+      required this.iconCategory,
+      required this.parking,
+      required this.bathRoom,
+      required this.bedRoom});
 
   HomeInformationModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -33,6 +43,11 @@ class HomeInformationModel {
     image = json['image'];
     rate = json['rate'];
     iconCategory = json['icon_category'];
+    sizeHome = json['size_home'];
+    parking = json['parking'];
+    bathRoom = json['bathroom'];
+    bedRoom = json['bedroom'];
+    description = json['description'];
   }
 
   Map<String, dynamic> toJson() {

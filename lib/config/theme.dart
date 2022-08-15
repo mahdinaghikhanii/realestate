@@ -12,10 +12,8 @@ class ThemeConfig {
           backgroundColor: Color(0xFFFFFFFF),
         ),
         textTheme: TextTheme(
-          bodyText2: const TextStyle(
-              color: Color(0xFF271B27),
-              fontWeight: FontWeight.w500,
-              fontFamily: "Poppins"),
+          bodyText2:
+              const TextStyle(color: Color(0xFF271B27), fontFamily: "Poppins"),
           subtitle2: TextStyle(
               color: isDarkTheme ? Colors.black : Colors.white,
               fontWeight: FontWeight.bold,

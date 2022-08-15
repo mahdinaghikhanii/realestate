@@ -10,10 +10,11 @@
         "image": "assets/img/home1.png",
         "rate" : 5.0,
         "icon_category" : "assets/svg/home.svg",
-        "size_home" : "40 * 80 m",
-        "parking" : "Parking",
-        "bedroom" : "4",
-        "Bathroom" : "3"
+        "size_home" : "40 x 80 m",
+        "parking" : true,
+        "bedroom" : 4,
+        "bathroom" : 3,
+        "description" : "Plaza Avenue, offer to our clients exceptional and professional service. We want you to find a gorgeous Samarinda Home that suits you. We have We have "
     },
     {
         "id": 2,
@@ -26,10 +27,11 @@
         "image": "assets/img/home2.png",
         "rate": 4.9,
         "icon_category" : "assets/svg/vila.svg",
-        "size_home" : "60 * 80 m",
-        "parking" : "Parking",
-        "bedroom" : "5",
-        "Bathroom" : "2"
+        "size_home" : "60 x 80 m",
+        "parking" : true,
+        "bedroom" : 5,
+        "bathroom" : 2,
+        "description" : "Plaza Avenue, offer to our clients exceptional and professional service. We want you to find a gorgeous Samarinda Home that suits you. We have We have "
     },
     {
         "id": 3,
@@ -42,9 +44,10 @@
         "image": "assets/img/home3.png",
         "rate": 4.5,
         "icon_category" : "assets/svg/aparteman.svg",
-        "size_home" : "45 * 70 m",
-        "parking" : "Parking",
-        "bedroom" : "4",
-        "Bathroom" : "4"
+        "size_home" : "45 x 70 m",
+        "parking" : true,
+        "bedroom" : 4,
+        "bathroom" : 4,
+        "description" : "Plaza Avenue, offer to our clients exceptional and professional service. We want you to find a gorgeous Samarinda Home that suits you. We have We have "
     }
 ]
