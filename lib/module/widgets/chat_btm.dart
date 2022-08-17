@@ -32,7 +32,7 @@ class ChatBottmNavigation extends StatelessWidget {
                       child: CircleAvatar(
                         backgroundColor: Colors.transparent,
                         backgroundImage: AssetImage(
-                          'assets/img/elina.jpg',
+                          'assets/img/profile.jpg',
                         ),
                       ),
                     ),
@@ -42,7 +42,7 @@ class ChatBottmNavigation extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Elina mohammadi',
+                        'Mahdi naghikhani',
                         style:
                             context.textTheme.subtitle1!.copyWith(fontSize: 14),
                       ),
